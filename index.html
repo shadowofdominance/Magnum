@@ -3,35 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Magnum Event - Matrix Theme</title>
+  <title>Magnum 2k24</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+
 </head>
 <body>
 
-  <!-- Header Navigation Panel -->
-  <header>
-    <nav class="navbar">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#events">Events</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Background Video and Main Title -->
-  <div class="landing">
-    <video autoplay muted loop id="bg-video">
-      <source src="assets/matrix-bg.mp4" type="video/mp4">
-      Your browser does not support the video tag.
+  <!-- Background Video -->
+  <div class="video-background">
+    <video autoplay loop muted playsinline>
+      <source src="assets/videos/matrix-bg.mp4" type="video/mp4">
     </video>
-    <div class="content">
-      <h1>Magnum Event</h1>
-      <p>Welcome to the Matrix - Step into the world of Magnum</p>
-      <a href="#events" class="cta-btn">Explore Events</a>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Magnum 2k24</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="events.html">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="organizers.html">Organizers</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container-fluid main-content">
+   <!-- <img src="/assets/logos/gogtelogo.png" alt="Left Logo" class="logo left"> -->
+    <!-- College Information -->
+    <div class="info-box slide-in">
+      <!--<img src="/assets/logos/gogteLogo.png" alt="Left Logo" class="logo left">-->
+      <br>
+      <h6>Karnataka Law Society's</h6>
+      <h4>Gogte College of Commerce</h4>
+      <h4>Bachelor of Computer Applications</h4>
+      <p>Presents</p>
+      <br>
+      <!--<img src="/assets/logos/bcalogo.png" alt="Right Logo" class="logo2 right">-->
+    </div>
+    <!--<img src="/assets/logos/bcalogo.png" alt="Right Logo" class="logo right">-->
+    <!-- Event Introduction -->
+    <div class="content-box slide-in">
+      <h1>Magnum</h1>
+      <h4>Welcome to the Matrix - Step into the world of Magnum</h4>
+      <a href="events.html" class="btn btn-outline-light btn-lg mt-3">Explore Events</a>
+	<br>
+      <a href="https://forms.gle/HnheJNycJyZJcbmi8" class="btn btn-outline-light btn-lg mt-3">Register Now</a>
     </div>
   </div>
+  <script src="animations.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<!-- Footer Section -->
+<footer class="footer">
+    <p>&copy; <span id="year"></span> Magnum24. All rights reserved.</p>
+</footer>
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>

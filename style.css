@@ -1,100 +1,415 @@
-/* Reset and Basic Styling */
+/* Footer Styling */
+.footer {
+    background-color: #333;  /* Dark background */
+    color: white;            /* White text */
+    text-align: center;      /* Center the text */
+    padding: 10px 0;         /* Padding above and below the text */
+    position: fixed;         /* Fix the footer at the bottom of the page */
+    left: 0;
+    bottom: 0;
+    width: 100%;             /* Full width */
+    font-size: 14px;         /* Adjust font size */
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Optional: Styling for the year span if you want to customize it */
+#year {
+    font-weight: bold;
+}
+
+/* Content box styling */
+.content-box {
+    margin: 20px auto;
+    max-width: 300px;
+    width: 200px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.9); /* Transparent background for Matrix theme */
+    border: 0px solid #00FF00; /* Matrix-green border */
+    border-radius: 10px;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.6);
+}
+
+.main-heading {
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 20px;
+    color: #00FF00;
+}
+
+.organizer-section {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.organizer-section h2 {
+    font-size: 1.8em;
+    color: #00FF00;
+}
+
+.organizer-image {
+    width: 800px;
+    height: 800px;
+    border-radius: 20%; /* Rounded square */
+    border: 3px solid #00FF00;
+    margin-top: 10px;
+}
+
+.student-coordinators {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.student {
+    margin: 20px 0;
+}
+
+/* Slide-in from left animation */
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Apply animation to elements */
+.slide-in {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.slide-in-visible {
+    opacity: 1;
+    transform: translateX(0);
+    animation: slideInLeft 1s ease forwards;
+}
+
+.organizer-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px; /* Rounded square */
+    border: 3px solid #00FF00;
+    margin-top: 10px;
+}
+
+/* Basic Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body, html {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  font-family: 'Arial', sans-serif;
-  color: #00ff00;
-  background-color: #000;
-}
-
-/* Header Navigation Styling */
-header {
+/* Background Video */
+.video-background {
   position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 10;
-  background: rgba(0, 0, 0, 0.8);
-}
-
-.navbar ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-}
-
-.navbar ul li {
-  margin: 0 15px;
-}
-
-.navbar ul li a {
-  color: #00ff00;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.navbar ul li a:hover {
-  text-decoration: underline;
-}
-
-/* Landing Page Background and Content Styling */
-.landing {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  overflow: hidden;
-}
-
-#bg-video {
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  z-index: 1;
-  opacity: 0.8;
 }
 
-/* Centered Content Styling */
-.content {
-  position: relative;
+/* Navbar Styling */
+.navbar {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Main Content Styling */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #00ff41;
   text-align: center;
-  z-index: 2;
-  color: #00ff00;
+  padding-top: 3rem;
+  gap: 2rem;
 }
 
-.content h1 {
-  font-size: 4rem;
-  margin-bottom: 10px;
-  text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+/* Transparent Boxes */
+.info-box, .content-box {
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  max-width: 1000px;
+  width: 100%;
 }
 
-.content p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+.info-box {
+  margin-bottom: 1rem;
 }
 
-.cta-btn {
-  display: inline-block;
-  padding: 10px 20px;
+h1, h2, h4, h5, h6, p {
+  margin-bottom: 0.5rem;
+}
+
+.btn-outline-light {
+  color: #00ff41;
+  border-color: #00ff41;
+}
+
+.btn-outline-light:hover {
+  background-color: #00ff41;
   color: #000;
-  background-color: #00ff00;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
 }
 
-.cta-btn:hover {
-  background-color: #00cc00;
+/* Responsiveness */
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 4rem;
+    gap: 1rem;
+  }
+}
+/* Background video styling */
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    filter: brightness(70%); /* Adjust for better readability */
+}
+
+/* Content container styling */
+.content-container {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 60%;
+    max-width: 10000px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 255, 0, 0.7); /* Optional for Matrix glow effect */
+    overflow: auto;
+}
+
+/* Title styling */
+.content-container h1 {
+    font-size: 2em;
+    text-align: center;
+    color: #00FF00;
+    text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00; /* Matrix green glow */
+}
+
+/* Description text styling */
+.content-container p {
+    font-size: 1.1em;
+    text-align: center;
+    line-height: 1.6;
+}
+/* Button Styling */
+.more-info-btn {
+    display: inline-block;
+    align-items: center;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 1em;
+    color: #00FF00;
+    background-color: transparent;
+    border: 1px solid #00FF00;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect */
+.more-info-btn:hover {
+    background-color: #00FF00;
+    color: #000;
+}
+.event-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #00FF00;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 10px rgba(0, 255, 0, 0.5);
+    flex-wrap: wrap; /* Ensure elements wrap to a new line if necessary */
+    max-width: 800px; /* Prevent overflow */
+    width: 100%;
+    justify-content: center;
+}
+
+/* Event logo styling */
+.event-logo {
+    width: 100px; /* Adjust width */
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 255, 0, 0.5);
+}
+
+/* Event details (title and description) styling */
+.event-details h2 {
+    color: #00FF00;
+    margin: 0;
+    font-size: 1.5em;
+    justify-content: center;
+}
+
+.event-details p {
+    margin: 5px 0 0;
+    line-height: 1.6;
+    color: #ccc;
+    justify-content: center;
+}
+.event-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.event-header, .event-description, .event-rules, .faculty-in-charge, .event-heads {
+    margin-bottom: 20px;
+}
+
+.faculty-img, .faculty-photo, .event-head-photo {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.event-head {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px; /* Rounded square */
+    border: 3px solid #00FF00;
+    margin-top: 10px;
+
+}
+/* Background Video */
+/* Background Video */
+#bgVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.9);
+}
+
+/* Main Content Container */
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #00FF00; /* Matrix green */
+    text-align: center;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.85);
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid #00FF00;
+    border-radius: 10px;
+}
+
+/* Event Info Section */
+.event-info {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 2rem;
+    border-radius: 8px;
+    width: 100%;
+    margin-bottom: 2rem;
+    border: 1px solid #00FF00;
+    align-items: center;
+}
+
+/* Section Headings */
+.section h2 {
+    color: #00FF00; /* Matrix green */
+    border-bottom: 1px solid #00FF00;
+    padding-bottom: 0.5rem;
+    margin-top: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Organizer Info Section */
+.organizer-info {
+    display: flex;
+    justify-content: space-around;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 2rem;
+    border-radius: 8px;
+    width: 100%;
+    border: 1px solid #00FF00;
+}
+
+.faculty, .event-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.faculty-img, .head-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+    object-fit: cover;
+    border: 2px solid #00FF00;
+}
+
+/* Typography */
+h1, h2, p {
+    font-family: 'Courier New', Courier, monospace; /* Matrix-like font */
+    color: #00FF00;
+}
+
+/* Bullet Points for Rules */
+ul {
+    list-style-type: square;
+    color: #00FF00;
+}
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8); /* Adjust background as needed */
+    padding: 20px;
+}
+
+.logo {
+    width: 100px; /* Adjust the size as needed */
+    height: 100px;
+}
+.logo2{
+    width: 250px; /* Adjust the size as needed */
+    height: 250px;
+}
+
+.left {
+    margin-right: 20px;
+}
+
+.right {
+    margin-left: 20px;
+}
+
+.text-content {
+    text-align: center;
+    color: #00FF00; /* Matrix green color */
 }
