@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Organizers</title>
+    <link rel="stylesheet" href="style.css"> <!-- Matrix theme styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="video-background">
+    <video autoplay loop muted playsinline>
+      <source src="assets/videos/matrix-bg.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Magnum 2k24</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="T>
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="events.html">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="organizers.html">Organizers</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+    <!-- Top panel (consistent across all pages) -->
+    <header>
+        <!-- Include your navigation and logo if necessary -->
+    </header>
+
+    <main>
+        <!-- Main Heading -->
+        <h1 class="main-heading">Event Organizers</h1>
+
+        <!-- Organizer Sections -->
+     <div class="content-container slide-in">
+	<section class="organizer-section">
+            <h2>Principal of the College</h2>
+            <p class="name">Dr. Venugopal Jalihal</p>
+            <img src="/assets/facultyic/venugopal.jpg" alt="Principal Image" class="organizer-image">
+        </section>
+
+        <section class="organizer-section">
+            <h2>Head of the Department</h2>
+            <p class="name">Dr. Asmita Deshpande</p>
+            <img src="/assets/facultyic/asmita.jpg" alt="Head of Department Image" class="organizer-image">
+        </section>
+
+        <section class="organizer-section">
+            <h2>Event Coordinator</h2>
+            <p class="name">Prof. Vaishali Shanbagh</p>
+            <img src="/assets/facultyic/vaishali.jpg" alt="Event Coordinator Image" class="organizer-image">
+        </section>
+
+        <section class="organizer-section">
+            <h2>Student Coordinators</h2>
+            <div class="student-coordinators">
+                <div class="student">
+                    <p class="name">Ranjeet Patil</p>
+                    <img src="[Student Coordinator 1 Image URL]" alt="Student Coordinator 1 Image" class="organizer-image">
+                </div>
+                <div class="student">
+                    <p class="name">Praisy Pillay</p>
+                    <img src="[Student Coordinator 2 Image URL]" alt="Student Coordinator 2 Image" class="organizer-image">
+                </div>
+            </div>
+        </section>
+      </div>
+    </main>
+  <script src="animations.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<!-- Footer Section -->
+<footer class="footer">
+    <p>&copy; <span id="year"></span> Magnum24. All rights reserved.</p>
+</footer>
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

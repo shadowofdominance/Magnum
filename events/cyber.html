@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackout Protocal</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/index.html">Magnum 2k24</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria->
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/events.html">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/organizers.html">Organizers</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <!-- Background Video -->
+    <video autoplay muted loop id="bgVideo">
+        <source src="/assets/videos/matrix-bag2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Main Content Container -->
+    <div class="content-container">
+
+        <!-- Event Info Section -->
+        <div class="event-info">
+            <h1>Blackout Protocal</h1>
+            <p class="tagline">When the Light goes out, The Hunt Begins!</p>
+
+            <!-- About Section -->
+            <div class="section">
+                <h2>About</h2>
+                <p>Blackout Protocol is a thrilling, beginner-friendly entry into the world
+		of cybersecurity, inspired by the Matrix. In this guided event,
+		participants will engage in hands-on challenges designed to build
+		foundational cybersecurity skills, from decoding encrypted messages
+		to navigating simulated breaches. Join us and unlock the secrets
+		of the digital world—where only the sharpest minds will emerge
+		victorious!</p>
+            </div>
+
+            <!-- Rules and Regulations Section -->
+            <div class="section">
+                <h2>Rules and Regulations</h2>
+                <ul>
+                    <li>2 Players per team(one compulsory from the 3rd Sem)</li>
+                    <li>1 Laptop required Minimum and a mobile with good internet connection</li>
+                    <li>Skills required: Linux Basics, Windows Basics, Networking Basics, OSINT, Recon skills</li>
+                    <!-- Add more rules as needed -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- Organizer Info Section -->
+        <div class="organizer-info">
+            <!-- Faculty in Charge -->
+            <div class="faculty">
+                <h2>Faculty In Charge</h2>
+                <p>Prof. Govind Huligol</p>
+                <img src="/assets/facultyic/govind.jpg" alt="Faculty In Charge" class="faculty-img">
+            </div>
+
+            <!-- Event Heads -->
+            <div class="event-heads">
+                <h2>Event Heads</h2>
+                <div class="event-head">
+			<p>Gourav Sapaliga</p>
+                    <img src="head1.jpg" alt="Event Head 1" class="head-img">
+                </div>
+
+                <div class="event-head">
+                    <img src="head2.jpg" alt="Event Head 2" class="head-img">
+			<p>Abhishek Shinde</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="animations.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Footer Section -->
+<footer class="footer">
+    <p>&copy; <span id="year"></span> Magnum24. All rights reserved.</p>
+</footer>
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
